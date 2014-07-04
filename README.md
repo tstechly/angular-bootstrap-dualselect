@@ -1,4 +1,4 @@
-# Angular two list selection directive
+# Angular directive - two select list
 
 [TODO - brief summary]
 
