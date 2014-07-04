@@ -1,0 +1,48 @@
+
+<div class="bootstrap-duallistbox-container">
+    <div class="box1 col-md-6">
+        <label>{{label1}} &nbsp;</label>
+           <span class="info-container">
+             <span class="info">Showing {{fAllItems.length}} of {{allItems.length}}</span>
+             <button type="button" class="btn btn-default btn-xs pull-right" ng-show="isFiltering1"
+                     ng-click="showAll1()">Show All
+             </button>
+           </span>
+        <input class="filter form-control" type="text" ng-model="filter1">
+
+        <div class="btn-group buttons">
+            <button type="button" id="addAll" class="btn btn-default moveall" ng-click="addAll()">
+                <i class="glyphicon glyphicon-arrow-right"></i>
+                <i class="glyphicon glyphicon-arrow-right"></i>
+            </button>
+        </div>
+        <!--           <select class="form-control" multiple="multiple" ng-model="s" ng-options="s for s in selectable">-->
+        <select id="select1" class="form-control" multiple="multiple" ng-change="add()"
+                ng-model="select1Model"
+                ng-options="c for c in fAllItems | orderBy:'name'">
+        </select>
+    </div>
+    <div class="box2 col-md-6">
+        <label>{{label2}} &nbsp;</label>
+           <span class="info-container">
+             <span class="info">Showing {{fSelectedItems.length}} of {{selectedItems.length}}</span>
+             <button type="button" class="btn btn-default btn-xs pull-right" ng-show="isFiltering2"
+                     ng-click="showAll2()">Show All
+             </button>
+           </span>
+        <input class="filter form-control" type="text" ng-model="filter2">
+
+        <div class="btn-group buttons">
+            <button id="removeAll" type="button" class="btn btn-default removeall " ng-click="removeAll()">
+                <i class="glyphicon glyphicon-arrow-left"></i>
+                <i class="glyphicon glyphicon-arrow-left"></i>
+            </button>
+        </div>
+        <select id="select2" class="form-control" multiple="multiple"
+                ng-model="select2Model"
+                ng-options="c for c in fSelectedItems | orderBy:'name'"
+                ng-click="remove()">
+
+        </select>
+    </div>
+</div>
