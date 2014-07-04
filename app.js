@@ -19,8 +19,8 @@ config(['$routeProvider', '$locationProvider', '$compileProvider', function($rou
 	// var staticPath ='/';
 	var staticPath;
 	// staticPath ='/angular-directives/angular-bootstrap-dualselect/';		//local
-	staticPath ='/';		//nodejs (local)
-	// staticPath ='/angular-bootstrap-dualselect/';		//gh-pages
+	//staticPath ='/';		//nodejs (local)
+	 staticPath ='/angular-bootstrap-dualselect/';		//gh-pages
 	var appPathRoute ='/';
 	var pagesPath =staticPath+'pages/';
 	
