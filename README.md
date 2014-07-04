@@ -7,9 +7,9 @@ http://tstechly.github.io/angular-bootstrap-dualselect/
 
 ## Dependencies
 - required:
-	[TODO]
+	angularjs
 - optional
-	[TODO]
+
 
 See `bower.json` and `index.html` in the `gh-pages` branch for a full list / more details
 

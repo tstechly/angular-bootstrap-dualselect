@@ -1,10 +1,10 @@
 {
 	"name": "angular-bootstrap-dualselect",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"authors": [
 		"Tomasz Stechly tomasz@stechly.com"
 	],
-	"description": "Angular two list selection directive",
+	"description": "Angular directive with two lists",
 	"keywords": [
 		"angular",
 		"form",
@@ -13,7 +13,7 @@
 		"select",
 		"dual"
 	],
-	"license": "MIT",
+	"license": "Apache 2.0",
 	"ignore": [
 		"**/.*",
 		"node_modules",
