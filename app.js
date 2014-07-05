@@ -15,12 +15,12 @@ config(['$routeProvider', '$locationProvider', '$compileProvider', function($rou
 	@toc 1.
 	*/
 	$locationProvider.html5Mode(false);		//can't use this with github pages / if don't have access to the server
-	
+
 	// var staticPath ='/';
 	var staticPath;
 	// staticPath ='/angular-directives/angular-bootstrap-dualselect/';		//local
 	//staticPath ='/';		//nodejs (local)
-	 staticPath ='/angular-bootstrap-dualselect/';		//gh-pages
+	staticPath ='/angular-bootstrap-dualselect/';		//gh-pages
 	var appPathRoute ='/';
 	var pagesPath =staticPath+'pages/';
 	

@@ -46,7 +46,7 @@ angular.module('tstechly.angular-bootstrap-dualselect').controller('DualselectCt
     });
     $scope.selectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
     $scope.fSelectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
-  }
+  };
 
   $scope.remove = function () {
     angular.forEach($scope.selectedItems, function (name, idx) {
@@ -72,11 +72,11 @@ angular.module('tstechly.angular-bootstrap-dualselect').controller('DualselectCt
       }
     }
     else {
-      for (var ii = $scope.allItems.length - 1; ii >= 0; ii--) {
-        $scope.selectedItems.push($scope.fAllItems[ii]);
-        $scope.fSelectedItems.push($scope.fAllItems[ii]);
-        $scope.fAllItems.splice(ii, 1);
-        $scope.allItems.splice(ii, 1);
+      for (var jj = $scope.allItems.length - 1; jj >= 0; jj--) {
+        $scope.selectedItems.push($scope.fAllItems[jj]);
+        $scope.fSelectedItems.push($scope.fAllItems[jj]);
+        $scope.fAllItems.splice(jj, 1);
+        $scope.allItems.splice(jj, 1);
       }
     }
     $scope.selectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
@@ -93,11 +93,11 @@ angular.module('tstechly.angular-bootstrap-dualselect').controller('DualselectCt
       }
     }
     else {
-      for (var ii = $scope.fSelectedItems.length - 1; ii >= 0; ii--) {
-        $scope.allItems.push($scope.fSelectedItems[ii]);
-        $scope.fAllItems.push($scope.selectedItems[ii]);
-        $scope.fSelectedItems.splice(ii, 1);
-        $scope.selectedItems.splice(ii, 1);
+      for (var jj = $scope.fSelectedItems.length - 1; jj >= 0; jj--) {
+        $scope.allItems.push($scope.fSelectedItems[jj]);
+        $scope.fAllItems.push($scope.selectedItems[jj]);
+        $scope.fSelectedItems.splice(jj, 1);
+        $scope.selectedItems.splice(jj, 1);
       }
     }
     $scope.allItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });

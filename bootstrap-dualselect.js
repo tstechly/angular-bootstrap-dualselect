@@ -1,6 +1,6 @@
 'use strict';
 
-var scripts = document.getElementsByTagName("script")
+var scripts = document.getElementsByTagName("script");
 var currentScriptPath = scripts[scripts.length-1].src;
 
 /* returns true if array 'a' contains 'obj' */
