@@ -19,7 +19,7 @@
         <!--           <select class="form-control" multiple="multiple" ng-model="s" ng-options="s for s in selectable">-->
         <select id="select1" class="form-control" multiple="multiple" ng-change="add()"
                 ng-model="select1Model"
-                ng-options="c for c in fAllItems | orderBy:'name'">
+                ng-options="c for c in fAllItems">
         </select>
     </div>
     <div class="box2 col-md-6">
@@ -40,7 +40,7 @@
         </div>
         <select id="select2" class="form-control" multiple="multiple"
                 ng-model="select2Model"
-                ng-options="c for c in fSelectedItems | orderBy:'name'"
+                ng-options="c for c in fSelectedItems"
                 ng-click="remove()">
 
         </select>
