@@ -15,6 +15,11 @@ angular.module('tstechly.angular-bootstrap-dualselect', []).directive('tsDualsel
       scope.label2 = attrs.label2;
       scope.allItems = scope.$parent[attrs.ngOptions];
       scope.selectedItems = scope.$parent[attrs.ngModel];
+
+      scope.allItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+      scope.fAllItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+      scope.selectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+      scope.fSelectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
     }
   };
 
