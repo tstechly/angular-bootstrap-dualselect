@@ -25,7 +25,6 @@ angular.module('tstechly.angular-bootstrap-dualselect').controller('DualselectCt
     $scope.fAllItems = $scope.allItems.filter(function (arrayElement) {
       return arrayElement.toLowerCase().indexOf(filter.toLowerCase()) > -1;
     });
-    $scope.fAllItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
     $scope.isFiltering1 = ($scope.fAllItems.length != $scope.allItems.length);
   });
 
@@ -33,7 +32,6 @@ angular.module('tstechly.angular-bootstrap-dualselect').controller('DualselectCt
     $scope.fSelectedItems = $scope.selectedItems.filter(function (arrayElement) {
       return arrayElement.toLowerCase().indexOf(filter.toLowerCase()) > -1;
     });
-    $scope.fSelectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
     $scope.isFiltering2 = ($scope.fSelectedItems.length != $scope.selectedItems.length);
   });
 
