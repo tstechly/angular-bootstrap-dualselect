@@ -23,17 +23,17 @@ angular.module('myApp').controller('DualselectCtrl', ['$scope', function ($scope
 
   $scope.$watch('filter1', function (filter) {
     $scope.fAllItems = $scope.allItems.filter(function (arrayElement) {
-      return arrayElement.indexOf(filter) > -1;
+      return arrayElement.toLowerCase().indexOf(filter.toLowerCase()) > -1;
     });
-    $scope.fAllItems.sort();
+    $scope.fAllItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
     $scope.isFiltering1 = ($scope.fAllItems.length != $scope.allItems.length);
   });
 
   $scope.$watch('filter2', function (filter) {
     $scope.fSelectedItems = $scope.selectedItems.filter(function (arrayElement) {
-      return arrayElement.indexOf(filter) > -1;
+      return arrayElement.toLowerCase().indexOf(filter.toLowerCase()) > -1;
     });
-    $scope.fSelectedItems.sort();
+    $scope.fSelectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
     $scope.isFiltering2 = ($scope.fSelectedItems.length != $scope.selectedItems.length);
   });
 
@@ -46,8 +46,8 @@ angular.module('myApp').controller('DualselectCtrl', ['$scope', function ($scope
         $scope.fAllItems.splice(idx, 1);
       }
     });
-    $scope.selectedItems.sort();
-    $scope.fSelectedItems.sort();
+    $scope.selectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+    $scope.fSelectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
   }
 
   $scope.remove = function () {
@@ -59,8 +59,8 @@ angular.module('myApp').controller('DualselectCtrl', ['$scope', function ($scope
         $scope.fSelectedItems.splice(idx, 1);
       }
     });
-    $scope.allItems.sort();
-    $scope.fAllItems.sort();
+    $scope.allItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+    $scope.fAllItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
   };
 
 
@@ -81,8 +81,8 @@ angular.module('myApp').controller('DualselectCtrl', ['$scope', function ($scope
         $scope.allItems.splice(ii, 1);
       }
     }
-    $scope.selectedItems.sort();
-    $scope.fSelectedItems.sort();
+    $scope.selectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+    $scope.fSelectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
   };
 
   $scope.removeAll = function () {
@@ -102,8 +102,8 @@ angular.module('myApp').controller('DualselectCtrl', ['$scope', function ($scope
         $scope.selectedItems.splice(ii, 1);
       }
     }
-    $scope.allItems.sort();
-    $scope.fAllItems.sort();
+    $scope.allItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+    $scope.fAllItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
   };
 
 }]);
