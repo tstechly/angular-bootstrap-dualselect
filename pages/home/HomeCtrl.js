@@ -4,12 +4,14 @@ angular.module('myApp').controller('HomeCtrl', ['$scope', function ($scope) {
   $scope.selectedStates = ['HAWAII', 'IOWA', 'ALASKA'];
 
   $scope.allStates = [
-    "ALABAMA",
+    "NEW HAMPSHIRE",
+    "MAINE",
+    "COLORADO",
     "ALASKA",
+    "ALABAMA",
     "ARIZONA",
     "ARKANSAS",
     "CALIFORNIA",
-    "COLORADO",
     "CONNECTICUT",
     "DELAWARE",
     "FLORIDA",
@@ -22,7 +24,6 @@ angular.module('myApp').controller('HomeCtrl', ['$scope', function ($scope) {
     "KANSAS",
     "KENTUCKY",
     "LOUISIANA",
-    "MAINE",
     "MARYLAND",
     "MASSACHUSETTS",
     "MICHIGAN",
@@ -32,7 +33,6 @@ angular.module('myApp').controller('HomeCtrl', ['$scope', function ($scope) {
     "MONTANA",
     "NEBRASKA",
     "NEVADA",
-    "NEW HAMPSHIRE",
     "NEW JERSEY",
     "NEW MEXICO",
     "NEW YORK",
