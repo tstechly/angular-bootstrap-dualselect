@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp').controller('DualselectCtrl', ['$scope', function ($scope) {
+angular.module('tstechly.angular-bootstrap-dualselect').controller('DualselectCtrl', ['$scope', function ($scope) {
   $scope.selectedItems = [];
   $scope.allItems = [];
   $scope.fSelectedItems = $scope.selectedItems.slice(0);
