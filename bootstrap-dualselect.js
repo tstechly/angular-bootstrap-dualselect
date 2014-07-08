@@ -31,7 +31,7 @@ angular.module('tstechly.angular-bootstrap-dualselect', []).directive('tsDualsel
         /* Add only items that are not on selectedItems list */
         for(var idx in scope.selectable) {
           var item = scope.selectable[idx];
-          scope.selectable.push(item.name)
+          scope.selectable.push(item.name);
           if(!contains(scope.selectedItems, item.name) && item!==undefined && item.name!==undefined) {
             scope.allItems.push(item.name);
             scope.fAllItems.push(item.name);
