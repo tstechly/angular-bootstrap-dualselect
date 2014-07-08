@@ -25,16 +25,19 @@ angular.module('tstechly.angular-bootstrap-dualselect', []).directive('tsDualsel
       scope.label1 = attrs.label1;
       scope.label2 = attrs.label2;
       scope.selectedItems = scope.$parent[attrs.ngModel];
+      var valueAttribute = attrs.value
 
       scope.$on("dualselect.event:data-ready", function() {
         scope.selectable = scope.$parent[attrs.ngOptions];
         /* Add only items that are not on selectedItems list */
         for(var idx in scope.selectable) {
           var item = scope.selectable[idx];
-          scope.selectable.push(item.name);
-          if(!contains(scope.selectedItems, item.name) && item!==undefined && item.name!==undefined) {
-            scope.allItems.push(item.name);
-            scope.fAllItems.push(item.name);
+          var itemValue = valueAttribute!==undefined?item[valueAttribute]:item;
+
+          scope.selectable.push(itemValue);
+          if(!contains(scope.selectedItems, itemValue) && item!==undefined && itemValue!==undefined) {
+            scope.allItems.push(itemValue);
+            scope.fAllItems.push(itemValue);
           }
         }
 
