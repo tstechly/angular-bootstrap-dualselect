@@ -1,5 +1,8 @@
 Version numbers correspond to `bower.json` version
 
+# 0.3.0
+- use event to initiate directive's data only on event
+
 # 0.2.0
 
 ## Features
