@@ -26,19 +26,23 @@ angular.module('tstechly.angular-bootstrap-dualselect', []).directive('tsDualsel
       scope.label2 = attrs.label2;
       scope.selectedItems = scope.$parent[attrs.ngModel];
 
-      /* Add only items that are not on selectedItems list */
-      for(var idx in scope.$parent[attrs.ngOptions]) {
-        var item = scope.$parent[attrs.ngOptions][idx];
-        if(!contains(scope.selectedItems, item)) {
-          scope.allItems.push(item);
+      scope.$on("dualselect.event:data-ready", function() {
+        scope.selectable = scope.$parent[attrs.ngOptions];
+        /* Add only items that are not on selectedItems list */
+        for(var idx in scope.selectable) {
+          var item = scope.selectable[idx];
+          scope.selectable.push(item.name)
+          if(!contains(scope.selectedItems, item.name) && item!==undefined && item.name!==undefined) {
+            scope.allItems.push(item.name);
+            scope.fAllItems.push(item.name);
+          }
         }
-      }
 
-      scope.allItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
-      scope.fAllItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
-      scope.selectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
-      scope.fSelectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+        scope.allItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+        scope.fAllItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+        scope.selectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+        scope.fSelectedItems.sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
+      });
     }
   };
-
 }]);

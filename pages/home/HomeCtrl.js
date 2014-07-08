@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp').controller('HomeCtrl', ['$scope', function ($scope) {
+angular.module('myApp').controller('HomeCtrl', ['$scope', function ($scope, $timeout) {
   $scope.selectedStates = ['HAWAII', 'IOWA', 'ALASKA'];
 
   $scope.allStates = [
@@ -55,4 +55,10 @@ angular.module('myApp').controller('HomeCtrl', ['$scope', function ($scope) {
     "WISCONSIN",
     "WYOMING"
   ];
+
+
+  setTimeout(function() {
+    $scope.$broadcast("dualselect.event:data-ready");
+  },1000);
+
 }]);
