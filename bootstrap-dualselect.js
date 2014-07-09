@@ -1,5 +1,19 @@
 'use strict';
+/*
+ Usage
 
+ <ts-dualselect label1="All items" label2="Selected items" ng-model="selected" ng-options="selectable" value="name"></ts-dualselect>
+
+ where:
+ label1 - label for left  select box
+ label2 - label for right select box
+ ng-options - elements that can be selected, displayed in left select box
+ ng-model - 'selected' elements, displayed in right select box
+ value - (optional) - if selectable elements are objects, value is name of the property. Value of the property
+ will be displayed in the select
+
+
+ */
 var scripts = document.getElementsByTagName("script");
 var currentScriptPath = scripts[scripts.length-1].src;
 
