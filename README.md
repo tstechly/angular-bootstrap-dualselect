@@ -38,7 +38,8 @@ https://github.com/tstechly/angular-bootstrap-dualselect/blob/master/bootstrap-d
 	3. git commit your changes
 2. copy over core files (.js and .css/.less for directives) to master branch
 	1. `git checkout master`
-	2. `git checkout gh-pages bootstrap-dualselect.js bootstrap-dualselect.min.js bootstrap-dualselect.less bootstrap-dualselect.css bootstrap-dualselect.min.css`
+	2. `git checkout gh-pages bootstrap-dualselect.less bootstrap-dualselect.css bootstrap-dualselect.js bootstrap-dualselect.min.css bootstrap-dualselect.min.js dualselect.html DualselectCtrl.js`
+
 3. update README, CHANGELOG, bower.json, and do any other final polishing to prepare for publishing
 	1. git commit changes
 	2. git tag with the version number, i.e. `git tag v1.0.0`

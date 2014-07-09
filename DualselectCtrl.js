@@ -41,6 +41,11 @@ angular.module('tstechly.angular-bootstrap-dualselect').controller('DualselectCt
         $scope.selectedItems.push(name);
         $scope.fSelectedItems.push(name);
         $scope.allItems.splice(idx, 1);
+      }
+    });
+    // we need to remove from fAllItems list separately since index may be different (filtered element list)
+    angular.forEach($scope.fAllItems, function (name, idx) {
+      if (name == $scope.select1Model) {
         $scope.fAllItems.splice(idx, 1);
       }
     });
@@ -54,6 +59,11 @@ angular.module('tstechly.angular-bootstrap-dualselect').controller('DualselectCt
         $scope.allItems.push(name);
         $scope.fAllItems.push(name);
         $scope.selectedItems.splice(idx, 1);
+      }
+    });
+    // we need to remove from fSelectedItem list separately since index may be different (filtered element list)
+    angular.forEach($scope.fSelectedItems, function (name, idx) {
+      if (name == $scope.select2Model) {
         $scope.fSelectedItems.splice(idx, 1);
       }
     });

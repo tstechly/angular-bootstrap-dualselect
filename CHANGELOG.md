@@ -1,5 +1,10 @@
 Version numbers correspond to `bower.json` version
 
+# 0.4.0
+- fix removal of items from filtered list
+- add 'value' attribute to dualselect
+
+
 # 0.3.0
 - use event to initiate directive's data only on event
 
